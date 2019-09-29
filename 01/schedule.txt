@@ -1,0 +1,10 @@
+and
+or
+xor
+mux
+dmux
+not
+not16
+and16
+or16
+mux16
