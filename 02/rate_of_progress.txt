@@ -1,0 +1,6 @@
+halfadder
+fulladder
+add16
+inc16
+or16way
+isneg
