@@ -1,0 +1,3 @@
+ram512
+ram4k
+ram16k

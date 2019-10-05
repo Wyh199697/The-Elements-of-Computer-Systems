@@ -17,4 +17,13 @@ CHIP PC {
 
     PARTS:
     // Put your code here:
+	Register(in = o3, load = o4, out = ramout);
+	Mux16(a = in, b = aluout, sel = o0, out = o1);
+	Mux16(a = o1, b[0..15] = false, sel = reset, out = o3);
+	Mux(a = inc, b = false, sel = load, out = o0);
+	Mux(a = o0, b = true, sel = load, out = o2);
+	Mux(a = o2, b = true, out = o4, sel = reset);
+	ALU(x = ramout, y = true, zx = false, nx = true, zy = true, ny = true, f = true, no = true, out = aluout);
+	Not16(in = ramout, out = o5);
+	Not16(in = o5, out = out);
 }
